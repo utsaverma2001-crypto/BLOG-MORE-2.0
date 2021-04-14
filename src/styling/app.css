@@ -6,6 +6,6 @@
 }
 
 body {
-  background-color: rgb(115, 219, 223);
+  background-color:var(--primary-color);
   font-family: "Inter", sans-serif;
 }

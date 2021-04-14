@@ -28,10 +28,10 @@ const Navbar = () => {
     e.preventDefault();
     dispatch(setInput(inputValue));
   };
-
+  
   return (
     <div className="navbar">
-      <h1 className="navbar__header">BLOGS TREAT 💬</h1>
+      <h1 className="navbar__header">BLOGS TREAT 2.0</h1>
       {isSignedIn && (
         <div className="blog__search">
           <input
@@ -45,7 +45,6 @@ const Navbar = () => {
           </button>
         </div>
       )}
-
       {isSignedIn ? (
         <div className="navbar__user__data">
           <Avatar
@@ -54,6 +53,7 @@ const Navbar = () => {
             alt={userData?.name}
           />
           <h1 className="signedIn">{userData?.givenName}</h1>
+         
           <GoogleLogout
             clientId="696365228527-7vv89pkqnksfp5ejqfivmb2rnpe31qoc.apps.googleusercontent.com"
             render={(renderProps) => (
@@ -71,6 +71,7 @@ const Navbar = () => {
       ) : (
         " "
       )}
+     
     </div>
   );
 };

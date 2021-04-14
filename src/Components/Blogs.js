@@ -14,20 +14,23 @@ const Blogs = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios
-      .get(blogurl)
+    //eslint-disable-next-line
+      .get(blogurl) 
       .then((response) => {
-        dispatch(setBlogData(response.data));
+        //eslint-disable-next-line
+        dispatch(setBlogData(response.data)); 
         setBlogs(response.data);
         setLoading(false);
       })
       .catch((error) => {
         console.log(error);
       });
-  }, [searchInput]);
-
+  },
+  //eslint-disable-next-line
+   [searchInput]);
   return (
     <div className="blog__page">
-      <h1 className="blog__page__header">Blogs</h1>
+      <h1 className="blog__page__header">BLOGS</h1>
       {loading ? <h1 className="loading">Loading...</h1> : ""}
       <div className="blogs">
         {blogs?.articles?.map((blog) => (
